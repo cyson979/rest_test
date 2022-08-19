@@ -13,6 +13,7 @@ const PORT = 5000;
 
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use('/users', usersRoutes);
 
 app.get('/', (req, res)=>res.send('Hello from Homepage.'));
